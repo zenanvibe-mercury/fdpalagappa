@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramalakshmi N - Resume</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Stars Animation */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 3px #fff;
+        }
+
+        .star.twinkle {
+            animation: twinkle 1.5s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { 
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Shooting Star Animation */
+        .shooting-star {
+            position: fixed;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 50%, transparent 100%);
+            z-index: 2;
+            transform-origin: left;
+            pointer-events: none;
+            filter: drop-shadow(0 0 5px white);
+        }
+
+        @keyframes shoot {
+            from {
+                transform: translateX(-200px) translateY(0px) rotate(35deg);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(calc(100vw + 200px)) translateY(100vh) rotate(35deg);
+                opacity: 0;
+            }
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #fff, #a6c1ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #a6c1ee;
+        }
+
+        /* Professional Experience */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .experience-item .date {
+            color: #a6c1ee;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            color: #a6c1ee;
+            margin-bottom: 15px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skill-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #a6c1ee;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h3 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .education-item p {
+            color: #a6c1ee;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars"></div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>RAMALAKSHMI N</h1>
+            <div class="contact-info">
+                <p>9363674569 | lakshminayagam27@gmail.com</p>
+                <p>1-1/8 Agraharam street, Kuniyur, Cheranmahadevi, Tirunelveli, Tamilnadu.</p>
+            </div>
+        </header>
+
+        <section>
+            <h2>PROFESSIONAL OBJECTIVE</h2>
+            <p>I am an Electronics and Communication Engineering student with a keen interest in both software and hardware fields. With hands-on experience in coding and circuit design through academic projects, I am actively seeking internship opportunities to apply my skills in real-world scenarios and further develop my expertise.</p>
+        </section>
+
+        <section>
+            <h2>KEY COMPETENCIES</h2>
+            <div class="skills-grid">
+                <div class="skill-list">
+                    <li>Critical thinking skills</li>
+                    <li>Problem solving skills</li>
+                    <li>Excellent communication skills</li>
+                    <li>Time management</li>
+                    <li>Teamwork and collaboration</li>
+                    <li>Leadership</li>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <div class="experience-item">
+                <h3>Acmegrade</h3>
+                <p class="date">Feb 2024 - Mar 2024</p>
+                <p>Web developement Intern (Online)</p>
+                <p>During my Web Development Internship, I worked on both frontend and backend tasks, using HTML, CSS, JavaScript, PHP, and MySQL. I built responsive layouts, integrated databases, and optimized website performance. I collaborated with senior developers to implement features, fix bugs, and improve user experience. This experience enhanced my skills in full-stack development and problem-solving.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Accent technosoft</h3>
+                <p class="date">Jun 2024 - Jul 2024</p>
+                <p>Full stack web development Intern (Offline)</p>
+                <p>As a Frontend Web Development Intern, I worked with HTML, CSS, JavaScript, and React to build interactive and responsive web applications. I developed layouts, integrated APIs, and refined designs to enhance functionality and user experience. This experience strengthened my skills in frontend development, problem-solving, and attention to detail.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>EDUCATION</h2>
+            <div class="education-item">
+                <h3>Francis Xavier Engineering College</h3>
+                <p>BE Electronics and Communication Engineer | 2023-2026 | 83%</p>
+            </div>
+            <div class="education-item">
+                <h3>Sivanthi Matriculation Hr Sec School</h3>
+                <p>HSC | 2022-2023 | 66%</p>
+            </div>
+            <div class="education-item">
+                <h3>Sivanthi Matriculation Hr Sec School</h3>
+                <p>SSLC | 2020-2021 | 80%</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web development</h3>
+                    <ul class="skill-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Relational Databases</h3>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Create stars with improved twinkling
+        const starsContainer = document.querySelector('.stars');
+        
+        // Create more stars for better effect
+        for (let i = 0; i < 300; i++) {
+            const star = document.createElement('div');
+            star.className = 'star twinkle';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 3}s`;
+            starsContainer.appendChild(star);
+        }
+
+        // Improved shooting stars function
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            
+            // Random starting position
+            const startingY = Math.random() * window.innerHeight / 3;
+            shootingStar.style.left = '0';
+            shootingStar.style.top = `${startingY}px`;
+            
+            // Random animation duration between 1 and 2 seconds
+            const duration = 1000 + Math.random() * 1000;
+            
+            // Apply the animation
+            shootingStar.style.animation = `shoot ${duration}ms linear`;
+            
+            document.body.appendChild(shootingStar);
+            
+            // Remove the shooting star after animation
+            setTimeout(() => {
+                shootingStar.remove();
+            }, duration);
+        }
+
+        // Create shooting stars at random intervals
+        function shootingStarLoop() {
+            // Random delay between 1 and 4 seconds
+            const delay = 1000 + Math.random() * 3000;
+            
+            setTimeout(() => {
+                createShootingStar();
+                shootingStarLoop();
+            }, delay);
+        }
+
+        // Start the shooting stars
+        shootingStarLoop();
+    </script>
+</body>
+</html>
